@@ -127,7 +127,7 @@ if(!class_exists('WP_Git_Embed')) {
         if(!empty($format)) {
           if(preg_match('/^pre.*/', $format)) {
             $format = explode('_', $format);
-            $raw = '<pre lang="'. $format[1] .'" line="'.$s_line.'">' . $raw . '</pre>';
+            $raw = '<pre class="prettyprint linenums '. $format[1] .'" line="'.$s_line.'">' . $raw . '</pre>';
             $links = TRUE;
             $format = 'pre';
           } elseif(preg_match('/^sourcecode.*/', $format)) {
@@ -147,10 +147,10 @@ if(!class_exists('WP_Git_Embed')) {
 
           //echo $source . '<br />' . $link; exit;
 
-          if($format == 'pre')
-           $raw .= '<div class="wp-git-embed" style="margin-bottom:10px; background-color:#def; border:1px solid #CCC; text-align:right; width:99%; margin-top:-21px; font-size:11px; font-style:italic;"><span style="display:inline-block; padding:4px;">'.$file_name.'</span>';
-          else
-            $raw .= '<div class="wp-git-embed" style="margin-bottom:10px; border:1px solid #CCC; text-align:right; width:99%; margin-top:-13px; font-size:11px; font-style:italic;"><span style="display:inline-block; padding:4px;">'.$file_name.'</span>';
+  //        if($format == 'pre')
+  //         $raw .= '<div class="wp-git-embed" style="margin-bottom:10px; background-color:#def; border:1px solid #CCC; text-align:right; width:99%; margin-top:-21px; font-size:11px; font-style:italic;"><span style="display:inline-block; padding:4px;">'.$file_name.'</span>';
+  //        else
+  //          $raw .= '<div class="wp-git-embed" style="margin-bottom:10px; border:1px solid #CCC; text-align:right; width:99%; margin-top:-13px; font-size:11px; font-style:italic;"><span style="display:inline-block; padding:4px;">'.$file_name.'</span>';
 
           if(preg_match('/^http.*:/', $link)) {
 
