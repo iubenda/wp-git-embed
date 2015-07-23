@@ -152,22 +152,22 @@ if(!class_exists('WP_Git_Embed')) {
   //        else
   //          $raw .= '<div class="wp-git-embed" style="margin-bottom:10px; border:1px solid #CCC; text-align:right; width:99%; margin-top:-13px; font-size:11px; font-style:italic;"><span style="display:inline-block; padding:4px;">'.$file_name.'</span>';
 
-          if(preg_match('/^http.*:/', $link)) {
+ //         if(preg_match('/^http.*:/', $link)) {
 
-            if(empty($source))
-              $raw .= '<a style="display:inline-block; padding:4px 6px;" href="' . $link . '" target="_blank">download file</a>';
-            else {
-              $raw .= '<a style="display:inline-block; padding:4px 6px;" href="' . $link . '" target="_blank">view raw</a>';
-              $raw .= '<a style="display:inline-block; padding:4px 6px; float:left;" href="' . $source . '" target="_blank">view file on ';
+ //           if(empty($source))
+ //             $raw .= '<a style="display:inline-block; padding:4px 6px;" href="' . $link . '" target="_blank">download file</a>';
+ //           else {
+ //             $raw .= '<a style="display:inline-block; padding:4px 6px;" href="' . $link . '" target="_blank">view raw</a>';
+ //             $raw .= '<a style="display:inline-block; padding:4px 6px; float:left;" href="' . $source . '" target="_blank">view file on ';
 
-              if($service == 'github') $raw .= '<strong>GitHub</strong></a>';
-              elseif($service == 'gist') $raw .= '<strong>GitHub Gist</strong></a>';
-              elseif($service == 'bitbucket') $raw .= ' <strong>Bitbucket</strong></a>';
-            }
-            
-          }
+ //             if($service == 'github') $raw .= '<strong>GitHub</strong></a>';
+ //             elseif($service == 'gist') $raw .= '<strong>GitHub Gist</strong></a>';
+ //             elseif($service == 'bitbucket') $raw .= ' <strong>Bitbucket</strong></a>';
+ //           }
+ //           
+ //         }
 
-          $raw .= '</div>';
+ //         $raw .= '</div>';
 
         }
 
