@@ -126,7 +126,7 @@ if(!class_exists('WP_Git_Embed')) {
         
         $raw = trim(preg_replace("\t", "  ", $raw));
         $raw = htmlentities($raw);
-        $raw = str_replace(" ", "&nbsp;", $_POST['raw']);
+        //$raw = str_replace(" ", "&nbsp;", $_POST['raw']);
 
         if(!empty($format)) {
           if(preg_match('/^pre.*/', $format)) {
