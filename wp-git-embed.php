@@ -123,6 +123,8 @@ if(!class_exists('WP_Git_Embed')) {
         else {
           $s_line = 1;
         }
+        
+        $raw = htmlentities($raw);
 
         if(!empty($format)) {
           if(preg_match('/^pre.*/', $format)) {
@@ -171,10 +173,10 @@ if(!class_exists('WP_Git_Embed')) {
 
         }
 
-        return htmlentities($raw);
+        return $raw;
         # return $raw .= "\n\n# $source"; # Todo.
 
-      } else return htmlentities($code);
+      } else return $code;
 
     }
 
