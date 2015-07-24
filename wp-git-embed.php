@@ -124,7 +124,7 @@ if(!class_exists('WP_Git_Embed')) {
           $s_line = 1;
         }
         
-        $raw = trim(preg_replace("\t", "  ", $raw));
+        $raw = preg_replace("\t", "  ", $raw);
         $raw = htmlentities($raw);
         //$raw = str_replace(" ", "&nbsp;", $_POST['raw']);
 
