@@ -171,10 +171,10 @@ if(!class_exists('WP_Git_Embed')) {
 
         }
 
-        return $raw;
+        return htmlentities($raw);
         # return $raw .= "\n\n# $source"; # Todo.
 
-      } else return $code;
+      } else return htmlentities($code);
 
     }
 
