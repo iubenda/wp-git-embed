@@ -132,7 +132,7 @@ if(!class_exists('WP_Git_Embed')) {
         if(!empty($format)) {
           if(preg_match('/^pre.*/', $format)) {
             $format = explode('_', $format);
-            $raw = '<pre class="prettyprint linenums '. $format[1] .'" line="'.$s_line.'">' . $raw . '</pre>';
+            $raw = '<pre data-swiftype-index="false" class="prettyprint linenums '. $format[1] .'" line="'.$s_line.'">' . $raw . '</pre>';
             $links = TRUE;
             $format = 'pre';
           } elseif(preg_match('/^sourcecode.*/', $format)) {
